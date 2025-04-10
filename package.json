@@ -11,10 +11,14 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@hckrnews/converter": "^0.5.5",
+    "@hckrnews/ppt2pdf": "^0.3.6",
     "ai": "^4.3.4",
     "dotenv": "^16.4.7",
     "express": "^5.1.0",
+    "i": "^0.3.7",
     "mongoose": "^8.13.2",
+    "npm": "^11.3.0",
     "pptxgenjs": "^3.12.0",
     "zod": "^3.24.2"
   }

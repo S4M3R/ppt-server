@@ -1,5 +1,5 @@
 import PptxGenJS  from "pptxgenjs";
-import { iSlideBase } from "../../zodParsers/presentations";
+import { iElement, iSlideBase } from "../../zodParsers/presentations";
 
 
 
@@ -27,13 +27,15 @@ export const generateSlide = async (pptx:PptxGenJS, slideBase:iSlideBase) => {
     // });
 }
 
-const addElement = (pptx:PptxGenJS, slide:PptxGenJS.Slide, element:Element) => {
+const addElement = (pptx:PptxGenJS, slide:PptxGenJS.Slide, element:iElement) => {
     if(element.type === "text") {
         slide.addText(element.content, {
-            x: slide.x ?? 0,
-            y: slide.y ?? 0,
+            x: element.x ?? 0,
+            y: element.y ?? 0,
+            w: element.w ?? "100%",
+            h: element.h ?? "100%",
             fontSize: element.fontSize || 100,
-            fontColor: element.fontColor || "black",
+            color: element.fontColor || "#000000",
         });
     }
 }

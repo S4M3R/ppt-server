@@ -17,6 +17,8 @@ export const zTextElement = z.object({
     fontColor: z.string().optional(),
     x: z.number().optional(),
     y: z.number().optional(),
+    w: z.number().optional(),
+    h: z.number().optional(),
 });
 
 
