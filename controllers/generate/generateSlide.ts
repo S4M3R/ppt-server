@@ -21,10 +21,6 @@ export const generateSlide = async (pptx:PptxGenJS, slideBase:iSlideBase) => {
         addElement(pptx, slide, element);
     })
 
-    // slide.addText(slide.elements[0].content, {
-    //     x: 0,
-    //     y: 0,
-    // });
 }
 
 const addElement = (pptx:PptxGenJS, slide:PptxGenJS.Slide, element:iElement) => {
